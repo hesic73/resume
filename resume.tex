@@ -4,6 +4,12 @@
 %\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
 %\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
 
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\renewcommand{\headrulewidth}{0pt}
+\lfoot{\scriptsize Last Updated: \today}
+
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
@@ -11,28 +17,29 @@
 
 \basicInfo{
   \email{sichengh@usc.edu} \textperiodcentered\ 
-  \phone{(+1) 213-304-6519} \textperiodcentered\ 
+  \homepage[hesic73.github.io]{https://hesic73.github.io/} \textperiodcentered\ 
   \github[heisc73]{https://github.com/hesic73} \textperiodcentered\ 
-  \linkedin[sicheng-he]{https://www.linkedin.com/in/sicheng-he-b80a5028a/}
+  \linkedin[sicheng-he]{https://www.linkedin.com/in/sicheng-he-b80a5028a/} \textperiodcentered\
+  \location{Los Angeles, CA}
   }
 
 \section{\faGraduationCap\ Education}
-\datedsubsection{\textbf{University of Southern California}, Los Angeles, CA}{01/2024 -- 05/2026 (anticipated)}
-\textit{M.S.} in Computer Science
-\datedsubsection{\textbf{Tsinghua University}, Beijing, China}{08/2019 -- 06/2023}
-\textit{B.E.} in Electronic Information Science and Technology, GPA: 3.54/4
+\datedsubsection{\textbf{University of Southern California}}{Los Angeles, CA}
+\textit{M.S.} in Computer Science\hfill\textit{Jan 2024 - now}
+\datedsubsection{\textbf{Tsinghua University}}{Beijing, China}
+\textit{B.E.} in Electronic Engineering\hfill\textit{Sept 2019 -- Jul 2023}
 
 \section{\faUsers\ Experience}
 
-\datedsubsection{\textbf{USC Robotic Embedded Systems Laboratory} Los Angeles, CA}{01/2024 -- now}
-\role{Research Assistant (Part-Time)}{}
-Bimanual Manipulation
+\datedsubsection{\textbf{USC Robotic Embedded Systems Laboratory}}{Los Angeles, CA}
+\role{Research Assistant}{}{Feb 2024 -- now}
+Imitation Learning for Bimanual Manipulation as a baseline
 \begin{itemize}
-  \item TO DO
+  \item Integrated the ACT algorithm within our repository as a baseline
 \end{itemize}
 
-\datedsubsection{\textbf{Tsinghua NICS-EFC} Beijing, China}{08/2023 -- 01/2024}
-\role{Research Intern}{Advisor: Dr. Chao Yu}
+\datedsubsection{\textbf{Tsinghua NICS-EFC}}{Beijing, China}
+\role{Research Intern}{Advisor: Dr. Chao Yu}{Aug 2023 -- Jan 2024}
 Multi-Agent Reinforcement Learning for Drone Control
 \begin{itemize}
   \item Achieved over 90\% success in cooperative drone juggling tasks
@@ -40,8 +47,8 @@ Multi-Agent Reinforcement Learning for Drone Control
   \item Replace the motion planning module with RL techniques in a quadrotor ball playing system
 \end{itemize}
 
-\datedsubsection{\textbf{HKUST Stat and ML Research Group} Hong Kong, China}{07/2022 -- 10/2022}
-\role{Summer Intern}{Advisor: Dr. Xiao Zhou}
+\datedsubsection{\textbf{HKUST Stat and ML Research Group}}{Hong Kong, China}
+\role{Summer Intern}{Advisor: Dr. Xiao Zhou}{Jul 2022 -- Oct 2022}
 Effective Sparsification of Neural Networks
 \begin{itemize}
   \item Implemented smaller dense subnetworks equivalent to sparse ones on Bert, VGG and other architectures
@@ -49,8 +56,8 @@ Effective Sparsification of Neural Networks
   \item Achieved speedup in pretraining Bert with negligible performance loss
 \end{itemize}
 
-\datedsubsection{\textbf{Moka HR} Beijing, China}{02/2023 -- 06/2023}
-\role{NLP Intern}{}
+\datedsubsection{\textbf{Moka HR}}{Beijing, China}
+\role{NLP Intern}{}{Feb 2023 -- Jun 2023}
 Instance Generation \& Embedding
 \begin{itemize}
   \item Developed a data annotation application using Gradio
@@ -63,8 +70,9 @@ Instance Generation \& Embedding
 \subsection{\faGithub\space\textbf{\href{https://github.com/hesic73/gomoku_rl}{gomoku{\_}rl}}: train an AI to master the game of Gomoku}
 
 \begin{itemize}
-  \item Implemented a GPU-parallelized gomoku environment for a faster reinforcement learning training pipeline
-  \item Trained agents that attained human-level performance on a $15\times15$ board using PSRO
+  \item Created a GPU-parallelized gomoku environment for a faster reinforcement learning training pipeline
+  \item Implemented PPO, DQN, independent RL and PSRO
+  \item Trained agents to achieve human-level proficiency in Gomoku on a $15\times15$ board within hours
 \end{itemize}
 
 % Reference Test
@@ -76,7 +84,7 @@ Instance Generation \& Embedding
 
 \section{\faCogs\ Skills}
 \begin{itemize}[parsep=0.5ex]
-  \item Programming Languages: Python, C/C++, C\#, Golang, Rust
+  \item Programming Languages: Python, C/C++, Rust, C\#, Golang
   \item Tools and Frameworks: Pytorch, Git, Qt, Markdown, \LaTeX
 \end{itemize}
 

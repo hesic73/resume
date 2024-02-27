@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{resume}[2015/05/25 An elegant Résumé class]
-\LoadClass[11pt]{article}
+\LoadClass[9pt]{article}
 
 % disable indent globally
 \setlength{\parindent}{0pt}
@@ -60,7 +60,7 @@
   {\large\raggedright}
   {}{0em}
   {}
-\titlespacing*{\subsection}{0cm}{*1.8}{*0.6}
+\titlespacing*{\subsection}{0cm}{*1.2}{*0.6}
 
 \newcommand{\datedsection}[2]{%
   \section[#1]{#1 \hfill #2}%
@@ -107,7 +107,10 @@
   \ifthenelse{\isempty{#1}}%
     {\href{#2}{#2}}
     {\href{#2}{#1}}}
-
+% defines one's location
+% usage: \location{<location>}
+\newcommand{\location}[1]{\faMapMarker\ 
+  #1}
 % defines progress bar with text
 % usage: \pbar[3][width]{Text}{percentage}
 \newcommand{\pbar}[3][10em]{{#2}\ 
@@ -115,11 +118,11 @@
 }
 
 \newcommand{\basicInfo}[1]{
-  \centerline{\sffamily\large{#1}}
+  \centerline{\sffamily\normalsize{#1}}
   \vspace{1.5ex}
 }
 
-\newcommand{\role}[2]{
-  {\par \textit{#1} ~ #2 \par}
+\newcommand{\role}[3]{
+  {\par \textit{#1} ~ #2\hfill \textit{#3} \par}
   \vspace{0.85ex}
 }
